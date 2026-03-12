@@ -69,31 +69,31 @@ export function Presentation() {
   }, [currentSlide]);
 
   // Keyboard navigation from parent iframe (Webflow fix)
-// useEffect(() => {
-//   const handleMessage = (event: MessageEvent) => {
-//     const allowedOrigins = [
-//       "https://fortinet-competition-report.vercel.app/",
-//       "https://lwstaging.webflow.io",
-//       "https://www.leadwalnut.com"
-//     ];
+useEffect(() => {
+  const handleMessage = (event: MessageEvent) => {
+    const allowedOrigins = [
+      "https://fortinet-competition-report.vercel.app",
+      "https://lwstaging.webflow.io",
+      "https://www.leadwalnut.com"
+    ];
 
-//     if (!allowedOrigins.includes(event.origin)) return;
+    if (!allowedOrigins.includes(event.origin)) return;
 
-//     if (event.data?.type === "KEY_NAV") {
-//       if (event.data.key === "ArrowRight") {
-//         setCurrentSlide(prev => Math.min(prev + 1, slides.length - 1));
-//       }
+    if (event.data?.type === "KEY_NAV") {
+      if (event.data.key === "ArrowRight") {
+        setCurrentSlide(prev => Math.min(prev + 1, slides.length - 1));
+      }
 
-//       if (event.data.key === "ArrowLeft") {
-//         setCurrentSlide(prev => Math.max(prev - 1, 0));
-//       }
-//     }
-//   };
+      if (event.data.key === "ArrowLeft") {
+        setCurrentSlide(prev => Math.max(prev - 1, 0));
+      }
+    }
+  };
 
-//   window.addEventListener("message", handleMessage);
+  window.addEventListener("message", handleMessage);
 
-//   return () => window.removeEventListener("message", handleMessage);
-// }, [slides.length]);
+  return () => window.removeEventListener("message", handleMessage);
+}, []);
 
   
 
