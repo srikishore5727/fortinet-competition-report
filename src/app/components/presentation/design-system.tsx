@@ -165,11 +165,11 @@ export function SlideContainer({
             >
               <Home size={18} />
             </button>
-            {source && (
+            {/* {source && (
               <div className="text-[10px] text-gray-500 whitespace-nowrap font-bold">
                 Source: {source}{[3, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 20, 21].includes(slideNumber) ? " · Country: US" : [4, 19, 23].includes(slideNumber) ? " · Country: WW" : ""}
               </div>
-            )}
+            )} */}
           </div>
         )}
         {children}
