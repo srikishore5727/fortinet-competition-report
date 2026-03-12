@@ -5,6 +5,7 @@ import { formatChartAxisNumber } from '@/app/utils/format';
 import {
   SlideContainer,
   SlideHeader,
+  SlideSource,
   SlideFooter,
   ChartContainer,
   InsightCard,
@@ -457,14 +458,18 @@ export function SlideCloudSecurity({ onNavigateHome }: { onNavigateHome?: () => 
 
   return (
     <SlideContainer slideNumber={13} onNavigateHome={onNavigateHome} source="Ahrefs">
+      <div className="mb-6">
       <SlideHeader 
         title="Cloud Security" 
         subtitle="(Jul 2025 - Feb 2026)"
       />
+      <SlideSource source="Semrush" slideNumber={13} />
+      </div>
       
       {!isEditing ? (
         <div className="flex-1 flex flex-col gap-6">
           {/* Tabs */}
+          <div className="flex items-center justify-between">
           <div className="flex items-start gap-1">
             {tabs.map((tab) => (
               <button
@@ -488,6 +493,7 @@ export function SlideCloudSecurity({ onNavigateHome }: { onNavigateHome?: () => 
             ))}
           </div>
           <TimeRangeFilter value={timeRange} onChange={setTimeRange} />
+          </div>
 
           {/* Content Area */}
           <div className="flex-1 grid grid-cols-12 gap-6">

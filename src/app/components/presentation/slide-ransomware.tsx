@@ -5,6 +5,7 @@ import {
   SlideContainer,
   SlideHeader,
   SlideFooter,
+  SlideSource,
   ChartContainer,
   InsightCard,
   InsightsSection,
@@ -457,14 +458,17 @@ export function SlideRansomware({ onNavigateHome }: { onNavigateHome?: () => voi
 
   return (
     <SlideContainer slideNumber={14} onNavigateHome={onNavigateHome} source="Ahrefs">
+      <div className="mb-6">
       <SlideHeader 
         title="Ransomware" 
         subtitle="(Jul 2025 - Feb 2026)"
-      />
+      /><SlideSource source="Semrush" slideNumber={14} />
+      </div>
       
       {!isEditing ? (
         <div className="flex-1 flex flex-col gap-6">
           {/* Tabs */}
+          <div className="flex items-center justify-between">
           <div className="flex items-start gap-1">
             {tabs.map((tab) => (
               <button
@@ -488,6 +492,7 @@ export function SlideRansomware({ onNavigateHome }: { onNavigateHome?: () => voi
             ))}
           </div>
           <TimeRangeFilter value={timeRange} onChange={setTimeRange} />
+          </div>
 
           {/* Content Area */}
           <div className="flex-1 grid grid-cols-12 gap-6">

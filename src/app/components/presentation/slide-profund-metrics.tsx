@@ -4,6 +4,7 @@ import { Sparkles, TrendingUp, Award, Zap, Target, TrendingDown, Trophy } from '
 import {
   SlideContainer,
   SlideHeader,
+  SlideSource,
   SlideFooter,
   ChartContainer,
   InsightCard,
@@ -311,11 +312,14 @@ export function SlideProfundMetrics({ onNavigateHome }: { onNavigateHome?: () =>
   };
 
   return (
-    <SlideContainer slideNumber={15} onNavigateHome={onNavigateHome} source="Profound">
+    <SlideContainer slideNumber={19} onNavigateHome={onNavigateHome} source="Profound">
+      <div className="mb-6">
       <SlideHeader 
         title="LLM Metrics" 
         subtitle="(Nov 2025 - Feb 2026)"
       />
+      <SlideSource source="Profound" slideNumber={19} />
+      </div>
 
       {!isEditing ? (
         <div className="flex-1 flex flex-col gap-6">

@@ -178,6 +178,28 @@ export function SlideContainer({
   );
 }
 
+interface SlideSourceProps {
+  source?: string;
+  slideNumber: number;
+}
+
+export function SlideSource({ source, slideNumber }: SlideSourceProps) {
+  if (!source) return null;
+
+  const country =
+    [3, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 20, 21].includes(slideNumber)
+      ? "US"
+      : [4, 19, 23].includes(slideNumber)
+      ? "WW"
+      : "";
+
+  return (
+    <div className="text-xs text-gray-500 mt-1 font-medium">
+      Source: {source}{country && ` · Country: ${country}`}
+    </div>
+  );
+}
+
 // ============================================================================
 // STANDARDIZED SLIDE HEADER
 // ============================================================================
@@ -186,16 +208,19 @@ interface SlideHeaderProps {
   title: string;
   subtitle?: string;
   actions?: ReactNode;
+  source?: string;
 }
 
 export function SlideHeader({ title, subtitle, actions }: SlideHeaderProps) {
   return (
-    <div className="flex items-start justify-between mb-8">
+    <div className="flex items-start justify-between">
       <div>
         <h1 className={TEXT_STYLES.slideTitle}>{title}</h1>
       </div>
       {actions && <div className="flex-shrink-0">{actions}</div>}
+      
     </div>
+    
   );
 }
 

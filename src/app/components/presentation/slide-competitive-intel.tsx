@@ -256,10 +256,12 @@ export function SlideCompetitiveIntel({ onNavigateHome }: { onNavigateHome?: () 
 
   return (
     <SlideContainer slideNumber={21} onNavigateHome={onNavigateHome} source="">
+      <div className="mb-6">
       <SlideHeader 
         title="Content Gap" 
         subtitle="Key Insights & Strategic Actions"
       />
+      </div>
 
       {/* Tab Navigation */}
       <div className="flex gap-3 mb-6">

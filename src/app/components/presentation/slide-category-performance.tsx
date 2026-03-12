@@ -5,6 +5,7 @@ import {
   SlideContainer,
   SlideHeader,
   SlideFooter,
+  SlideSource,
   ChartContainer,
   CHART_CONFIG,
   COLORS,
@@ -278,11 +279,14 @@ export function SlideCategoryPerformance({ onNavigateHome }: { onNavigateHome?: 
   };
 
   return (
-    <SlideContainer slideNumber={16} onNavigateHome={onNavigateHome}>
+    <SlideContainer slideNumber={20} onNavigateHome={onNavigateHome}>
+      <div className="mb-6">
       <SlideHeader 
         title="Focused Category" 
         subtitle="(Nov 2025 - Feb 2026)"
       />
+      <SlideSource source="Semrush" slideNumber={20} />
+      </div>
 
       <div className="flex-1 flex flex-col gap-6">
         {/* Tabs */}

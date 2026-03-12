@@ -13,6 +13,7 @@ import {
 import {
   SlideContainer,
   SlideHeader,
+  SlideSource,
   SlideFooter,
   ChartContainer,
   InsightCard,
@@ -309,15 +310,19 @@ export function SlideBacklinks({ onNavigateHome }: { onNavigateHome?: () => void
   };
 
   return (
-    <SlideContainer slideNumber={19} onNavigateHome={onNavigateHome}>
+    <SlideContainer slideNumber={23} onNavigateHome={onNavigateHome}>
+      <div className="mb-6">
       <SlideHeader
         title="Competitions Backlink Performance"
         subtitle="(Jul 2025 - Feb 2026) • Location: WW"
       />
+      <SlideSource source="Semrush" slideNumber={23} />
+      </div>
 
       {!isEditing ? (
         <div className="flex-1 flex flex-col gap-6">
           {/* Tabs */}
+          <div className="flex items-center justify-between">
           <div className="flex items-start gap-1">
             {tabs.map((tab) => (
               <button
@@ -341,6 +346,7 @@ export function SlideBacklinks({ onNavigateHome }: { onNavigateHome?: () => void
             ))}
           </div>
           <TimeRangeFilter value={timeRange} onChange={setTimeRange} />
+          </div>
 
           {/* Content Area */}
           <div className="flex-1 grid grid-cols-12 gap-6">

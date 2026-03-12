@@ -4,6 +4,7 @@ import { TrendingUp, BarChart3, Zap } from 'lucide-react';
 import {
   SlideContainer,
   SlideHeader,
+  SlideSource,
   SlideFooter,
   ChartContainer,
   ContextualInsightCard,

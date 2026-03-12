@@ -3,6 +3,7 @@ import { useState } from 'react';
 import {
   SlideContainer,
   SlideHeader,
+  SlideSource,
   SlideFooter,
   ChartContainer,
   InsightCard,
@@ -456,10 +457,13 @@ export function SlideOTSecurity({ onNavigateHome }: { onNavigateHome?: () => voi
 
   return (
     <SlideContainer slideNumber={10} onNavigateHome={onNavigateHome} source="Ahrefs">
+      <div className="mb-6">
       <SlideHeader 
         title="OT Security" 
         subtitle="(Jul 2025 - Feb 2026)"
       />
+      <SlideSource source="Semrush" slideNumber={10} />
+      </div>
       
       {!isEditing ? (
         <div className="flex-1 flex flex-col gap-6">

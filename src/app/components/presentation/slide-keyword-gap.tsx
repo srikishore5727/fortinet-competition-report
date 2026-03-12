@@ -3,6 +3,7 @@ import { useState } from 'react';
 import {
   SlideContainer,
   SlideHeader,
+  SlideSource,
   SlideFooter,
 } from './design-system';
 
@@ -93,10 +94,13 @@ export function SlideKeywordGap({ onNavigateHome }: { onNavigateHome?: () => voi
   const IconComponent = getTabIcon();
 
   return (
-    <SlideContainer slideNumber={22} onNavigateHome={onNavigateHome}>
+    <SlideContainer slideNumber={26} onNavigateHome={onNavigateHome}>
+      <div className="mb-6">
       <SlideHeader 
         title="Keyword Gap" 
       />
+      <SlideSource source="Semrush" slideNumber={26} />
+      </div>
       
       <div className="flex-1 flex flex-col gap-4 pb-4">
         {/* Main Tab Navigation - Curved Folder Style */}

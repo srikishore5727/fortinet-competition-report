@@ -4,6 +4,7 @@ import {
   SlideContainer,
   SlideHeader,
   SlideFooter,
+  SlideSource,
   ChartContainer,
   InsightCard,
   InsightsSection,
@@ -433,10 +434,13 @@ export function SlideNGFW({ onNavigateHome }: SlideNGFWProps) {
 
   return (
     <SlideContainer slideNumber={8} onNavigateHome={onNavigateHome} source="Ahrefs">
+      <div className="mb-6">
       <SlideHeader
         title="NGFW / Firewall"
         subtitle="(Jul 2025 - Feb 2026)"
       />
+      <SlideSource source="Semrush" slideNumber={8} />
+      </div>
 
       {!isEditing ? (
         <div className="flex-1 flex flex-col gap-6">

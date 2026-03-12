@@ -6,6 +6,7 @@ import { formatNumber } from '@/app/utils/format';
 import {
   SlideContainer,
   SlideHeader,
+  SlideSource,
   SlideFooter,
   ChartContainer,
   InsightCard,
@@ -329,10 +330,14 @@ export function SlideTrafficOverviewTabs({ onNavigateHome }: SlideTrafficOvervie
 
   return (
     <SlideContainer slideNumber={3} onNavigateHome={onNavigateHome}>
+      <div className="mb-6">
       <SlideHeader
         title="Organic Traffic Performance Overview"
         subtitle="(Oct 2025 - Jan 2026)"
       />
+      <SlideSource source="Semrush" slideNumber={3} />
+      </div>
+      
 
       {/* Tabs */}
       <div className="flex items-center justify-between mb-6">

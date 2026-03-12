@@ -140,10 +140,12 @@ export function SlideCompetitiveFindings({ onNavigateHome }: { onNavigateHome?: 
 
   return (
     <SlideContainer slideNumber={23} onNavigateHome={onNavigateHome} source="">
+      <div className="mb-6">
       <SlideHeader 
         title="Web Experience" 
         subtitle="Strategic Observations from Competitor Websites"
       />
+      </div>
       
       <div className="flex-1 flex flex-col gap-4 pb-4 overflow-hidden">
         {/* Top Panel - Horizontal Findings Buttons */}
