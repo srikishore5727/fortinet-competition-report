@@ -68,6 +68,35 @@ export function Presentation() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentSlide]);
 
+  // Keyboard navigation from parent iframe (Webflow fix)
+useEffect(() => {
+  const handleMessage = (event: MessageEvent) => {
+    const allowedOrigins = [
+      "https://fortinet-competition-report.vercel.app/",
+      "https://lwstaging.webflow.io",
+      "https://www.leadwalnut.com"
+    ];
+
+    if (!allowedOrigins.includes(event.origin)) return;
+
+    if (event.data?.type === "KEY_NAV") {
+      if (event.data.key === "ArrowRight") {
+        setCurrentSlide(prev => Math.min(prev + 1, slides.length - 1));
+      }
+
+      if (event.data.key === "ArrowLeft") {
+        setCurrentSlide(prev => Math.max(prev - 1, 0));
+      }
+    }
+  };
+
+  window.addEventListener("message", handleMessage);
+
+  return () => window.removeEventListener("message", handleMessage);
+}, [slides.length]);
+
+  
+
   const slides = [
     <SlideCover onNavigateHome={goToHome} />,
     <SlideTOC onNavigate={(index) => setCurrentSlide(index)} onNavigateHome={goToHome} />,
