@@ -439,7 +439,7 @@ export function SlideNGFW({ onNavigateHome }: SlideNGFWProps) {
         title="NGFW / Firewall"
         subtitle="(Jul 2025 - Feb 2026)"
       />
-      <SlideSource source="Semrush" slideNumber={8} />
+      <SlideSource source="Ahrefs" slideNumber={8} />
       </div>
 
       {!isEditing ? (

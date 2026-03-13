@@ -464,7 +464,7 @@ export function SlideQuantumSecurity({ onNavigateHome }: { onNavigateHome?: () =
         title="Quantum Security" 
         subtitle="(Dec 2025 - Feb 2026)"
       />
-      <SlideSource source="Semrush" slideNumber={16} />
+      <SlideSource source="Ahrefs" slideNumber={16} />
       </div>
       
       {!isEditing ? (

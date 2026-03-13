@@ -318,7 +318,7 @@ export function SlideProfundMetrics({ onNavigateHome }: { onNavigateHome?: () =>
         title="LLM Metrics" 
         subtitle="(Nov 2025 - Feb 2026)"
       />
-      <SlideSource source="Profound" slideNumber={19} />
+      <SlideSource source="Profound" slideNumber={20} />
       </div>
 
       {!isEditing ? (

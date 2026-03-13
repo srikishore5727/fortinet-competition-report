@@ -462,7 +462,7 @@ export function SlideOTSecurity({ onNavigateHome }: { onNavigateHome?: () => voi
         title="OT Security" 
         subtitle="(Jul 2025 - Feb 2026)"
       />
-      <SlideSource source="Semrush" slideNumber={10} />
+      <SlideSource source="Ahrefs" slideNumber={10} />
       </div>
       
       {!isEditing ? (

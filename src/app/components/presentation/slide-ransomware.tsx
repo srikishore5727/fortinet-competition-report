@@ -462,7 +462,7 @@ export function SlideRansomware({ onNavigateHome }: { onNavigateHome?: () => voi
       <SlideHeader 
         title="Ransomware" 
         subtitle="(Jul 2025 - Feb 2026)"
-      /><SlideSource source="Semrush" slideNumber={14} />
+      /><SlideSource source="Ahrefs" slideNumber={14} />
       </div>
       
       {!isEditing ? (

@@ -472,7 +472,7 @@ export function SlideSDWANMetrics({ onNavigateHome }: { onNavigateHome?: () => v
         title="SD-WAN" 
         subtitle="(Jul 2025 - Feb 2026)"
       />
-      <SlideSource source="Semrush" slideNumber={9} />
+      <SlideSource source="Ahrefs" slideNumber={9} />
       </div>
       
       {!isEditing ? (

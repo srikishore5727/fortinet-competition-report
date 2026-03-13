@@ -464,7 +464,7 @@ export function SlideAICyberSecurity({ onNavigateHome }: { onNavigateHome?: () =
         title="AI CyberSecurity" 
         subtitle="(Dec 2025 - Feb 2026)"
       />
-      <SlideSource source="Semrush" slideNumber={15} />
+      <SlideSource source="Ahrefs" slideNumber={15} />
       </div>
       
       {!isEditing ? (

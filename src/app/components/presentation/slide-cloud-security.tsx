@@ -463,7 +463,7 @@ export function SlideCloudSecurity({ onNavigateHome }: { onNavigateHome?: () => 
         title="Cloud Security" 
         subtitle="(Jul 2025 - Feb 2026)"
       />
-      <SlideSource source="Semrush" slideNumber={13} />
+      <SlideSource source="Ahrefs" slideNumber={13} />
       </div>
       
       {!isEditing ? (

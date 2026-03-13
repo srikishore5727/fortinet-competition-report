@@ -285,7 +285,7 @@ export function SlideCategoryPerformance({ onNavigateHome }: { onNavigateHome?: 
         title="Focused Category" 
         subtitle="(Nov 2025 - Feb 2026)"
       />
-      <SlideSource source="Semrush" slideNumber={20} />
+      <SlideSource source="Profound" slideNumber={20} />
       </div>
 
       <div className="flex-1 flex flex-col gap-6">

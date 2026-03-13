@@ -462,7 +462,7 @@ export function SlideDashboard({ onNavigateHome }: { onNavigateHome?: () => void
         title="SASE" 
         subtitle="(Jul 2025 - Feb 2026)"
       />
-     <SlideSource source="Semrush" slideNumber={12} />
+     <SlideSource source="Ahrefs" slideNumber={12} />
       </div>
       
       {!isEditing ? (
