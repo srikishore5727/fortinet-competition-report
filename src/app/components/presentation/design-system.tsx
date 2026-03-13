@@ -194,7 +194,7 @@ export function SlideSource({ source, slideNumber }: SlideSourceProps) {
       : "";
 
   return (
-    <div className="text-xs text-gray-500 mt-1 font-medium">
+    <div className="text-xs text-gray-500 mt-1 font-bold">
       Source: {source}{country && ` · Country: ${country}`}
     </div>
   );

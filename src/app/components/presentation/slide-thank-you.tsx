@@ -199,7 +199,7 @@ export function SlideThankYou() {
       </div>
 
       {/* Date Footer */}
-      <motion.div
+      {/* <motion.div
         className="absolute bottom-12 left-1/2 -translate-x-1/2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -208,7 +208,7 @@ export function SlideThankYou() {
         <p className="text-sm text-gray-400 font-medium">
           Analysis Period: October 2025 - January 2026
         </p>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 }
